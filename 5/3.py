@@ -16,4 +16,4 @@ for i in range(1, n+1):
         break
     else:
         r = r + (1/sin(j)) 
-print("Результат: ", r)
+print("Результат: ", r) #проверка git
