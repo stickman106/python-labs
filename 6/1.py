@@ -1,21 +1,25 @@
 while True:
-    text = input("Введите текст: ")
+    text = input("Поддерживается русский и английский текс. Введите текст: ")
     if text != '':
         break
     else:
         print('Строка должна быть написана')
-sogl = 'бвгджзйклмнпрстфхцчшщ'
-c=0
-for i in set(text):
-    if i.isalpha() == False:
-        text = text.replace(i, ' ')
-text = text.lower()
-l = text.split()
-for word in l:
-    for i in range(len(word)-1):
-        if word[i] == word[i+1] and word[i] in sogl:
-            c+=1
-            break
+text2 = text.lower()
+text2 = text2+' '
+sogl = 'бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxz'
+c = 0
+word = ''
+for i in range(len(text2)):
+    if text2[i] != ' ':
+        word = word+text2[i]
+    else:
+        for let in range(len(word)-1):
+            if word[let] == word[let+1]:
+                c+=1
+                break
+        word = ''
+    
+
 print(f"Текст: {text}")
 print('Кол-во слов: ', c)
 
