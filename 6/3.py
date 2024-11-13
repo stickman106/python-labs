@@ -24,7 +24,7 @@ for i in range(len(lnumb)):
         count+=1
 for i in range(len(lnumb)):
     if abs(lnumb[i]) > maxn: # > если нужен первый max, >= если нужен последний max
-        print(abs(lnumb[i]))
+        
         numi = i
         maxn = abs(lnumb[i])
 for i in range(numi+1, len(lnumb)):

@@ -1,10 +1,12 @@
 while True:
-    text = input("Поддерживается русский и английский текс. Введите текст: ")
+    text = input("Поддерживается подсчет для русского и английского текста. Введите текст: ")
     if text != '':
         break
     else:
         print('Строка должна быть написана')
-text2 = text.lower()
+text2=''
+for i in range(len(text)):
+    text2 = text2 + str(text[i].lower())
 text2 = text2+' '
 sogl = 'бвгджзйклмнпрстфхцчшщbcdfghjklmnpqrstvwxz'
 c = 0
